@@ -23,6 +23,7 @@ DataMapper works by diving data into sections with each header having it's own s
 
 ### `addDataHeaderSection`
 **Parameter(header)**: The symbolic name of the data section pairs.
+
 **Parameter(data_pairs)**: The actually data pairs to outputted, that is the _data's name_ and the _data itself_. A user can enter any number of data pairs they wish.
 
 After calling a series of this function, it is required to call the `save` function to save the data header contents to the file.
@@ -40,6 +41,7 @@ data_mapper.save();
 
 ### `retrieveDataHeaderSection`
 **Parameter(header)**: The symbolic name of the data section pairs.
+
 **Parameter(data_pairs)**: The actually data pairs to be extracted to, that is the _data's name_ and the _pointer to the data's variable_. A user can enter any number of data pairs they wish.
 
 And since this class uses a hash map to store the retrieved data header sections, data header sections with the same header coalesce into one data header section
