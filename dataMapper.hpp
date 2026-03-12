@@ -144,7 +144,7 @@ private:
 
 public:
 	template<typename... DataPairs>
-	void addDataHeaderSections(const std::string& header, DataPairs... data_pairs) {
+	void addDataHeaderSection(const std::string& header, DataPairs... data_pairs) {
 		m_outputFileContentsAsString += "[[" + header + "]]\n";
 
 		save_impl(data_pairs...);
