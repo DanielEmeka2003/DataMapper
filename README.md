@@ -30,8 +30,11 @@ After calling a series of this function, it is required to call the `save` funct
 Example:
 ```C++
 DataMapper data_mapper{ std::filesystem::path{R"(C:\Users\Owner\Documents\dataFile.txt)"}};
+
 data_mapper.addDataHeaderSection("Settings", std::pair{ "Boolean", true }, std::pair{ "Float", 9004.90f }, std::pair{ "Int", 788889 });
+
 data_mapper.addDataHeaderSection("Other", std::pair{"Boolean_1", false}, std::pair{"Float_1", 50.90f}, std::pair{"Int_1", 99989});
+
 data_mapper.save();
 ```
 
@@ -48,6 +51,7 @@ float floating, floating_1{};
 int inting, inting_1{};
 
 data_mapper.retrieveDataHeaderSection("Settings", std::pair{"Boolean", &booling}, std::pair{"Float", &floating}, std::pair{"Int", &inting});
+
 data_mapper.retrieveDataHeaderSection("Other", std::pair{"Boolean_1", &booling_1}, std::pair{"Float_1", &floating_1}, std::pair{"Int_1", &inting_1});
 ```
 
