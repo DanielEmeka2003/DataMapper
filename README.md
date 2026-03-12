@@ -1,5 +1,5 @@
-# AUTHOR
-The author's name is Daniel Emeka
+# Author
+The author of this projet is the owner of this repository, that is **Daniel Emeka**
 
 # What Is DataMapper?
 Is a class that manages the saving and retrieval of data from a file in a minimalist, but intuitive way. It stores the data in a specific serialization format not to different from mainstream data representation languages, like TOML and JSON.
