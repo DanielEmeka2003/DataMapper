@@ -26,7 +26,7 @@ DataMapper works by diving data into sections with each header having it's own s
 
 **Parameter(data_pairs)**: The actually data pairs to outputted, that is the _data's name_ and the _data itself_. A user can enter any number of data pairs they wish.
 
-After calling a series of this function, it is required to call the `save` function to save the data header contents to the file.
+After calling a series of this function, it is required to call the `save` function to save the data header sections to the file.
 
 Example:
 ```C++
