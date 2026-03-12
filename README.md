@@ -17,7 +17,24 @@ It is minimalist, so the setup required is near zero, just set the the filepath 
 It uses unconstrained generic typing and the poorly designed variadic templates or parameter packs as it is called. So, invariants can't be met while using the class to save and retrieve data. Like everything in C++, just be extra careful when using the class
 
 # How DataMapper Works
-DataMapper works by diving data into sections with each header having it's own section called data header sections. It is models other data representation languages in that regard, and the reason for this design was symbolic to the specific project I am working on, as the data are split into various class or namespaces.
+DataMapper works by diving data into sections with each header having it's own section called data header sections. It models other data representation languages in that regard, and the reason for this design was symbolic to the specific project I am working on, as the data are split into various class or namespaces.
+
+DataMapper also uses C++'s standard I/O stream for conversion between any data type to a `std::string`, and because of that, the flexibility of the standard I/O stream can be used effectively to define I/O operators for any data type you wish to work with DataMapper, example:
+
+```C++
+struct Vector3 {
+  float x{}, y{}, z{};
+};
+
+std::ostream& operator<<(std::ostream& out, const Vector3& data) {
+  return out << x << ' ' << y << ' ' << z;
+}
+
+std::istream& operator>>(std::istream& in, const Vector3& data) {
+  return in >> data.x >> data.y >> data.z;
+}
+```
+Now the `Vector3` type can work with DataMapper :)
 
 ## DataMapper Functions
 
