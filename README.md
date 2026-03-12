@@ -19,7 +19,8 @@ It uses unconstrained generic typing and the poorly designed variadic templates 
 # How DataMapper Works
 DataMapper works by diving data into sections with each header having it's own section called data header sections. It models other data representation languages in that regard, and the reason for this design was symbolic to the specific project I am working on, as the data are split into various class or namespaces.
 
-DataMapper also uses C++'s standard I/O stream for conversion between any data type to a `std::string`, and because of that, the flexibility of the standard I/O stream can be used effectively to define I/O operators for any data type you wish to work with DataMapper, example:
+## DataMapper I/O
+DataMapper uses C++'s standard I/O stream for conversion between any data type to a `std::string`, and because of that, the flexibility of the standard I/O stream can be used effectively to define I/O operators for any data type you wish to work with DataMapper, example:
 
 ```C++
 struct Vector3 {
